@@ -522,6 +522,12 @@ button {
   gap: 1rem;
 }
 
+.services-grid .service-card {
+  grid-column: 1 / -1;
+  min-height: 14rem;
+  padding: 2rem;
+}
+
 .journey-card,
 .service-card {
   grid-column: span 6;
