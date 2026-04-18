@@ -985,6 +985,15 @@ button {
   );
 }
 
+.social-link-blog {
+  color: #6a4b2a;
+  background: linear-gradient(
+    180deg,
+    rgba(250, 246, 239, 0.98),
+    rgba(240, 231, 214, 0.98)
+  );
+}
+
 .social-link-whatsapp {
   color: #456f5f;
   background: linear-gradient(
