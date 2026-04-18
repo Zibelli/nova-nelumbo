@@ -4,6 +4,7 @@ const siteNav = document.querySelector(".site-nav");
 const navLinks = document.querySelectorAll(".nav-list a, .footer-links a");
 const sections = document.querySelectorAll("main section[id], footer[id]");
 const revealElements = document.querySelectorAll(".reveal");
+const whatsappLink = document.querySelector("[data-whatsapp-app-link]");
 
 const setHeaderState = () => {
   const shouldCompact = window.scrollY > 24;
@@ -65,6 +66,37 @@ navLinks.forEach((link) => {
     }
   });
 });
+
+if (whatsappLink) {
+  whatsappLink.addEventListener("click", (event) => {
+    const appLink = whatsappLink.dataset.whatsappAppLink;
+    const webLink = whatsappLink.dataset.whatsappWebLink;
+
+    if (!appLink || !webLink) {
+      return;
+    }
+
+    event.preventDefault();
+
+    let didHidePage = false;
+    const handleVisibilityChange = () => {
+      if (document.visibilityState === "hidden") {
+        didHidePage = true;
+      }
+    };
+
+    document.addEventListener("visibilitychange", handleVisibilityChange);
+    window.location.href = appLink;
+
+    window.setTimeout(() => {
+      document.removeEventListener("visibilitychange", handleVisibilityChange);
+
+      if (!didHidePage) {
+        window.open(webLink, "_blank", "noopener,noreferrer");
+      }
+    }, 700);
+  });
+}
 
 document.addEventListener("keydown", (event) => {
   if (event.key === "Escape" && siteNav.classList.contains("is-open")) {
