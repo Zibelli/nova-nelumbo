@@ -353,25 +353,41 @@ button {
 
 .hero-surface {
   position: absolute;
-  inset: 7rem 0 auto auto;
-  width: min(42vw, 34rem);
-  height: min(42vw, 34rem);
+  inset: 5.5rem -4rem auto auto;
+  width: min(50vw, 42rem);
+  height: min(52vw, 40rem);
   border-radius: 43% 57% 68% 32% / 34% 34% 66% 66%;
+  background: none;
+  transform: translateX(8%);
+  pointer-events: none;
+}
+
+.hero-surface::before {
+  content: "";
+  position: absolute;
+  inset: 4% -10% -8% 16%;
+  background: url("assets/nelumbo.png") center right / contain no-repeat;
+  opacity: 0.17;
+}
+
+.hero-surface::after {
+  content: "";
+  position: absolute;
+  inset: 2% 0 8% 6%;
+  border-radius: inherit;
   background:
     radial-gradient(
-      circle at 30% 30%,
-      rgba(255, 255, 255, 0.8),
-      transparent 30%
+      circle at 62% 48%,
+      rgba(222, 199, 206, 0.42) 0%,
+      rgba(239, 227, 230, 0.2) 34%,
+      rgba(252, 248, 249, 0) 70%
     ),
     linear-gradient(
-      135deg,
-      rgba(222, 199, 206, 0.78),
-      rgba(239, 227, 230, 0.42)
+      270deg,
+      rgba(252, 248, 249, 0.04) 0%,
+      rgba(252, 248, 249, 0.18) 36%,
+      rgba(252, 248, 249, 0.56) 100%
     );
-  filter: blur(0.2px);
-  opacity: 0.95;
-  transform: translateX(18%);
-  pointer-events: none;
 }
 
 .hero-grid {
@@ -405,22 +421,6 @@ button {
   display: grid;
   gap: 1rem;
   align-self: center;
-}
-
-.hero-figure {
-  margin: 0;
-  padding: 1.5rem;
-  border-radius: var(--radius-lg);
-  background: rgba(255, 255, 255, 0.72);
-  border: 1px solid var(--color-border);
-  box-shadow: var(--shadow-soft);
-}
-
-.hero-image {
-  width: 100%;
-  max-width: 20rem;
-  margin: 0 auto;
-  object-fit: contain;
 }
 
 .value-card,
@@ -897,9 +897,31 @@ button {
   }
 
   .hero-surface {
-    width: min(78vw, 28rem);
-    height: min(78vw, 28rem);
-    inset: 8rem -2rem auto auto;
+    width: min(78vw, 30rem);
+    height: min(82vw, 31rem);
+    inset: 7rem -3.5rem auto auto;
+  }
+
+  .hero-surface::before {
+    inset: 10% -14% 2% 24%;
+    opacity: 0.13;
+  }
+
+  .hero-surface::after {
+    inset: 4% 0 10% 8%;
+    background:
+      radial-gradient(
+        circle at 60% 44%,
+        rgba(222, 199, 206, 0.34) 0%,
+        rgba(239, 227, 230, 0.16) 34%,
+        rgba(252, 248, 249, 0) 70%
+      ),
+      linear-gradient(
+        270deg,
+        rgba(252, 248, 249, 0.1) 0%,
+        rgba(252, 248, 249, 0.28) 44%,
+        rgba(252, 248, 249, 0.66) 100%
+      );
   }
 
   .timeline {
@@ -948,6 +970,21 @@ button {
 
   .hero {
     padding-top: calc(var(--header-height) + 3rem);
+  }
+
+  .hero-surface {
+    width: min(72vw, 20rem);
+    height: min(78vw, 22rem);
+    inset: 7.25rem -3.25rem auto auto;
+  }
+
+  .hero-surface::before {
+    inset: 12% -20% 8% 30%;
+    opacity: 0.1;
+  }
+
+  .hero-surface::after {
+    inset: 8% 0 12% 12%;
   }
 
   .journey-card,
