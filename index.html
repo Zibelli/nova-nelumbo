@@ -33,68 +33,130 @@
     />
     <link rel="canonical" href="https://nelumbomarketing.com.br/" />
     <link rel="icon" href="assets/browser.ico" type="image/x-icon" />
+    <link
+      rel="preload"
+      href="assets/fonts/manrope-latin.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin
+    />
+    <link
+      rel="preload"
+      href="assets/fonts/cormorant-garamond-latin.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin
+    />
+    <link rel="preload" href="assets/nelumbo.png" as="image" />
     <link rel="stylesheet" href="style.css" />
+    <meta name="author" content="Caroline Morgante" />
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
-        "@type": "Organization",
-        "name": "Nelumbo Marketing",
-        "url": "https://nelumbomarketing.com.br/",
-        "logo": "https://nelumbomarketing.com.br/assets/nelumbo-brand.png",
-        "description": "Assessoria de marketing com abordagem inovadora e orientada para resultados, criando estratégias personalizadas para elevar marcas com sofisticação e clareza.",
-        "contactPoint": [
+        "@graph": [
           {
-            "@type": "ContactPoint",
-            "email": "contato@nelumbomarketing.com.br",
-            "contactType": "customer service",
-            "availableLanguage": "Portuguese"
+            "@type": "Organization",
+            "@id": "https://nelumbomarketing.com.br/#organization",
+            "name": "Nelumbo Marketing",
+            "url": "https://nelumbomarketing.com.br/",
+            "logo": {
+              "@type": "ImageObject",
+              "url": "https://nelumbomarketing.com.br/assets/nelumbo-brand.png",
+              "width": 2048,
+              "height": 2048
+            },
+            "description": "Assessoria de marketing com abordagem inovadora e orientada para resultados, criando estratégias personalizadas para elevar marcas com sofisticação e clareza.",
+            "contactPoint": [
+              {
+                "@type": "ContactPoint",
+                "email": "contato@nelumbomarketing.com.br",
+                "contactType": "customer service",
+                "availableLanguage": "Portuguese"
+              },
+              {
+                "@type": "ContactPoint",
+                "telephone": "+55-11-98587-9887",
+                "contactType": "customer service",
+                "availableLanguage": "Portuguese"
+              }
+            ],
+            "sameAs": [
+              "https://www.linkedin.com/company/nelumbo-marketing",
+              "https://www.instagram.com/nelumbo.marketing/",
+              "https://nelumbomarketing.wordpress.com/"
+            ]
           },
           {
-            "@type": "ContactPoint",
-            "telephone": "+55-11-98587-9887",
-            "contactType": "customer service",
-            "contactOption": "TollFree",
-            "availableLanguage": "Portuguese"
+            "@type": "WebSite",
+            "@id": "https://nelumbomarketing.com.br/#website",
+            "name": "Nelumbo Marketing",
+            "url": "https://nelumbomarketing.com.br/",
+            "inLanguage": "pt-BR",
+            "publisher": {
+              "@id": "https://nelumbomarketing.com.br/#organization"
+            }
+          },
+          {
+            "@type": "Person",
+            "@id": "https://nelumbomarketing.com.br/#caroline-morgante",
+            "name": "Caroline Morgante",
+            "jobTitle": "Fundadora e Consultora de Marketing",
+            "description": "Formada em administração de empresas e pós-graduada em gestão de negócios com ênfase em marketing pela ESPM, com 16 anos de experiência em marketing de eventos.",
+            "image": "https://nelumbomarketing.com.br/assets/carol-portrait.png",
+            "sameAs": ["https://www.linkedin.com/company/nelumbo-marketing"],
+            "worksFor": {
+              "@id": "https://nelumbomarketing.com.br/#organization"
+            }
+          },
+          {
+            "@type": "Service",
+            "name": "Assessoria de Marketing Estratégico",
+            "description": "Criação e execução de estratégias de marketing personalizadas para impulsionar o crescimento e a visibilidade de marcas, com foco em resultados mensuráveis.",
+            "provider": {
+              "@id": "https://nelumbomarketing.com.br/#organization"
+            },
+            "areaServed": "BR",
+            "availableLanguage": "Portuguese",
+            "url": "https://nelumbomarketing.com.br/#servicos"
+          },
+          {
+            "@type": "Service",
+            "name": "Consultoria em Marketing de Eventos",
+            "description": "Assessoria especializada em marketing de eventos, desde o planejamento estratégico até a execução, com 16 anos de experiência no setor.",
+            "provider": {
+              "@id": "https://nelumbomarketing.com.br/#organization"
+            },
+            "areaServed": "BR",
+            "availableLanguage": "Portuguese",
+            "url": "https://nelumbomarketing.com.br/#servicos"
+          },
+          {
+            "@type": "HowTo",
+            "name": "Como a Nelumbo Marketing atua",
+            "description": "Processo de trabalho da Nelumbo Marketing: do diagnóstico ao crescimento mensurável.",
+            "step": [
+              {
+                "@type": "HowToStep",
+                "position": 1,
+                "name": "Análise, Estudo e Entrevista",
+                "text": "Nos reunimos para melhor entender as necessidades do seu negócio e para identificar as melhorias que podem ser feitas."
+              },
+              {
+                "@type": "HowToStep",
+                "position": 2,
+                "name": "Plano de Marketing",
+                "text": "Criamos um plano de marketing detalhado com todas as ações propostas e prazos a serem cumpridos."
+              },
+              {
+                "@type": "HowToStep",
+                "position": 3,
+                "name": "Execução",
+                "text": "Após a aprovação do marketing plan, executamos as ações, monitoramos os resultados e realizamos ajustes sempre que necessário."
+              }
+            ]
           }
-        ],
-        "sameAs": [
-          "https://www.linkedin.com/company/nelumbo-marketing",
-          "https://www.instagram.com/nelumbo.marketing/",
-          "https://nelumbomarketing.wordpress.com/"
         ]
       }
-    </script>
-    <script type="application/ld+json">
-      [
-        {
-          "@context": "https://schema.org",
-          "@type": "Service",
-          "name": "Assessoria de Marketing Estratégico",
-          "description": "Criação e execução de estratégias de marketing personalizadas para impulsionar o crescimento e a visibilidade de marcas, com foco em resultados mensuráveis.",
-          "provider": {
-            "@type": "Organization",
-            "name": "Nelumbo Marketing",
-            "url": "https://nelumbomarketing.com.br/"
-          },
-          "areaServed": "BR",
-          "availableLanguage": "Portuguese",
-          "url": "https://nelumbomarketing.com.br/#servicos"
-        },
-        {
-          "@context": "https://schema.org",
-          "@type": "Service",
-          "name": "Consultoria em Marketing de Eventos",
-          "description": "Assessoria especializada em marketing de eventos, desde o planejamento estratégico até a execução, com 16 anos de experiência no setor.",
-          "provider": {
-            "@type": "Organization",
-            "name": "Nelumbo Marketing",
-            "url": "https://nelumbomarketing.com.br/"
-          },
-          "areaServed": "BR",
-          "availableLanguage": "Portuguese",
-          "url": "https://nelumbomarketing.com.br/#servicos"
-        }
-      ]
     </script>
   </head>
   <body>
@@ -111,6 +173,8 @@
             src="assets/nelumbo-brand.png"
             alt=""
             aria-hidden="true"
+            width="2048"
+            height="2048"
           />
           <span class="brand-text">Nelumbo Marketing</span>
         </a>
@@ -447,6 +511,8 @@
                 src="assets/carol-portrait.png"
                 alt="Foto de Caroline Morgante"
                 loading="lazy"
+                width="409"
+                height="510"
               />
             </figure>
 
@@ -544,7 +610,7 @@
       </div>
 
       <div class="container footer-bottom reveal">
-        <p>&copy; 2023 Nelumbo Marketing. Todos os direitos reservados.</p>
+        <p>&copy; 2023–2026 Nelumbo Marketing. Todos os direitos reservados.</p>
       </div>
     </footer>
 
