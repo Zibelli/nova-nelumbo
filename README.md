@@ -15,6 +15,12 @@ O projeto foi estruturado para funcionar de forma simples e direta:
 ```text
 nova-nelumbo/
 ├── assets/
+│   ├── fonts/
+│   │   ├── cormorant-garamond-latin.woff2
+│   │   ├── cormorant-garamond-latin-ext.woff2
+│   │   ├── manrope-latin.woff2
+│   │   ├── manrope-latin-ext.woff2
+│   │   └── OFL.txt
 │   ├── browser.ico
 │   ├── carol-portrait.png
 │   ├── nelumbo-brand.png
@@ -22,6 +28,9 @@ nova-nelumbo/
 ├── index.html
 ├── style.css
 ├── script.js
+├── robots.txt
+├── sitemap.xml
+├── CNAME
 └── README.md
 ```
 
@@ -30,25 +39,16 @@ nova-nelumbo/
 - `index.html`: estrutura da página, conteúdo institucional, SEO e links.
 - `style.css`: layout, responsividade, paleta visual e ajustes de interface.
 - `script.js`: interações da navegação, menu mobile e animações suaves.
-- `assets/`: imagens e ícones usados no site.
+- `assets/`: imagens, ícones e fontes auto-hospedadas usados no site.
+- `robots.txt`: diretivas para crawlers de mecanismos de busca.
+- `sitemap.xml`: mapa do site para indexação por buscadores.
+- `CNAME`: configuração de domínio personalizado no GitHub Pages.
 
 ## Como executar localmente
 
 Como o projeto é estático, basta abrir o arquivo `index.html` no navegador.
 
 Se preferir testar com um servidor local simples, você pode usar qualquer extensão de servidor estático no VS Code ou um servidor HTTP local da sua preferência.
-
-## Como publicar no GitHub Pages
-
-1. Faça push do projeto para um repositório no GitHub.
-2. No GitHub, abra o repositório.
-3. Vá em `Settings` > `Pages`.
-4. Em `Build and deployment`, selecione `Deploy from a branch`.
-5. Escolha a branch `main`.
-6. Escolha a pasta `/ (root)`.
-7. Salve as configurações.
-
-Depois disso, o GitHub Pages vai publicar o site automaticamente.
 
 ## Personalização rápida
 
@@ -69,10 +69,13 @@ Substitua os arquivos dentro de `assets/`, mantendo os mesmos nomes, ou atualize
 - HTML5
 - CSS3
 - JavaScript Vanilla
+- Fontes auto-hospedadas: Cormorant Garamond e Manrope (formato woff2, licença OFL)
 
 ## Observações
 
 - O projeto não usa framework.
 - O projeto não depende de backend.
 - Todos os caminhos de arquivos são relativos.
-- O site está preparado para uso estático em ambiente local e GitHub Pages.
+- As fontes são servidas localmente em `assets/fonts/`, sem dependência do Google Fonts.
+- O site está publicado em [nelumbomarketing.com.br](https://nelumbomarketing.com.br/) via GitHub Pages com domínio personalizado.
+- O domínio personalizado é configurado pelo arquivo `CNAME`.
