@@ -6,9 +6,9 @@ Landing page institucional one-page da Nelumbo Marketing, desenvolvida com HTML,
 
 O projeto foi estruturado para funcionar de forma simples e direta:
 
-- abertura local do arquivo `index.html`
+- abertura local do arquivo `index.html` ou por um servidor estático simples
 - publicação estática no GitHub Pages
-- manutenção fácil de conteúdo, imagens e estilos
+- manutenção fácil de conteúdo, imagens, estilos e ajustes de SEO/privacidade
 
 ## Estrutura do projeto
 
@@ -36,9 +36,9 @@ nova-nelumbo/
 
 ## Arquivos principais
 
-- `index.html`: estrutura da página, conteúdo institucional, SEO e links.
+- `index.html`: estrutura da página, conteúdo institucional, SEO, links externos e políticas de segurança/privacidade.
 - `style.css`: layout, responsividade, paleta visual e ajustes de interface.
-- `script.js`: interações da navegação, menu mobile e animações suaves.
+- `script.js`: interações da navegação, menu mobile, animações suaves e abertura de links para WhatsApp.
 - `assets/`: imagens, ícones e fontes auto-hospedadas usados no site.
 - `robots.txt`: diretivas para crawlers de mecanismos de busca.
 - `sitemap.xml`: mapa do site para indexação por buscadores.
@@ -79,3 +79,4 @@ Substitua os arquivos dentro de `assets/`, mantendo os mesmos nomes, ou atualize
 - As fontes são servidas localmente em `assets/fonts/`, sem dependência do Google Fonts.
 - O site está publicado em [nelumbomarketing.com.br](https://nelumbomarketing.com.br/) via GitHub Pages com domínio personalizado.
 - O domínio personalizado é configurado pelo arquivo `CNAME`.
+- O site inclui medidas básicas de segurança e privacidade no HTML, como CSP, `Referrer-Policy` e `Permissions-Policy`.
